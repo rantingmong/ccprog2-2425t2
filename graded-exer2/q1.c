@@ -33,6 +33,7 @@ y  7  0  0
 int main(void)
 {
   int size = 7;
+  int content[100][100];
 
   int height = size / 2 + 2;
   int width = size;
@@ -49,11 +50,11 @@ int main(void)
     {
       if (col >= spacing && col < (width + spacing))
       {
-        printf("%c", toRender);
+        content[row][col] = toRender;
       }
       else
       {
-        printf(" ");
+        content[row][col] = ' ';
       }
     }
 
@@ -67,7 +68,17 @@ int main(void)
       width += 2;
       spacing -= 1;
     }
+  }
+
+  for (int row = 0; row < height; row += 1)
+  {
+    for (int col = 0; col < size; col += 1)
+    {
+      printf("%c", content[row][col]);
+    }
 
     printf("\n");
   }
+
+  return 0;
 }
