@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "*.ejs": "html",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "string.h": "c"
   },
   "editor.fontLigatures": false
 }

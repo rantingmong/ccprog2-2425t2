@@ -36,10 +36,8 @@ int main(void)
   // leveraging array accessors math to reverse the string
   for (; inputIndex < strlen(input); inputIndex += 1)
   {
-    toUppercase(&input[palinIndex]);
-    palin[inputIndex] = input[palinIndex];
-
-    palinIndex -= 1;
+    toUppercase(&input[palinIndex - inputIndex]);
+    palin[inputIndex] = input[palinIndex - inputIndex];
   }
 
   if (strcmp(input, palin) == 0)
