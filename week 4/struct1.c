@@ -73,7 +73,7 @@ int main(void)
       .age = 28,
       .gender = 1};
 
-  // converting variable to struct for its fields to be updated
+  // converting variable to pointer for its fields to be updated
   birthday(&aPerson);
   married(&bPerson);
 
